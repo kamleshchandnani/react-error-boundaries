@@ -1,5 +1,7 @@
 export const getRepos = username => {
-  return fetch(`https://api.github.com/users1/${username}/repos?sort=updated`)
+  return fetch(
+    `https://api.github.com/users1/${username}/repos?sort=updated&client_id=fb5e9d733895cd450757&client_secret=759ad1a3998bdc86dce2867e63113600e5f2707f`
+  )
     .then(response => response.json())
     .then(data => {
       let repos = data.map(repo => {
